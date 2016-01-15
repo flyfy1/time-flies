@@ -15,7 +15,9 @@
   "author": "Brad Daily <brad@bradleyboy.com>",
   "license": "MIT",
   "dependencies": {
+    "dateformat": "^1.0.12",
     "react": "^0.14.0",
+    "react-datetime": "^2.0.2",
     "react-dom": "^0.14.0"
   },
   "devDependencies": {

@@ -1,5 +1,4 @@
 :local(.main)
-  background-image: url(./images/bg.jpg)
   background-size: cover
   background-position: center
   background-repeat: no-repeat
@@ -23,3 +22,17 @@
 
   p
     margin-bottom: 1em
+
+  :local(.percentage_box)
+    margin-top: 10px
+
+  :local(.control_area)
+    :local(.box)
+      display: inline-block
+      @media only screen and (max-width : 600px)
+        width: 100%
+      @media only screen and (min-width : 600px)
+        width: 49%
+
+.rdtDay
+  cursor: pointer
