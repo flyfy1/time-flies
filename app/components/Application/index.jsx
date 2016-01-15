@@ -8,6 +8,8 @@ import DatePicker from 'react-datetime';
 import 'react-datetime/css/react-datetime.css'
 import date_format from 'dateformat'
 
+const expect_years = 82
+
 export default class extends React.Component {
   update_time(){
     this.setState({now: new Date()})
@@ -59,11 +61,12 @@ export default class extends React.Component {
 
     if( dob ) {
       expected_last_day = new Date(dob.getTime())
-      expected_last_day.setFullYear(expected_last_day.getFullYear() + 70)
+      expected_last_day.setFullYear(expected_last_day.getFullYear() + expect_years)
     }
 
     return <div className={styles.main}>
       <div className={styles.wrap}>
+        <Header/>
         <main className={styles.body}>
           <div className={styles.control_area}>
             <div className={styles.box}>
@@ -73,17 +76,17 @@ export default class extends React.Component {
 
             <div className={styles.box}>
               <label>Expected Live: </label>
-              <span>70 years</span>
+              <span>{expect_years} years</span>
             </div>
           </div>
 
           <div className={styles.percentage_box}>
-            <div>Percentage of Current Year: </div>
+            <div>Progress of Current Year: </div>
             <ProgressBar start={year_start} end={year_end} progress={now}/>
           </div>
 
           <div className={styles.percentage_box}>
-            <div>Percentage of life: </div>
+            <div>Progress of life: </div>
             <ProgressBar start={dob} end={expected_last_day} progress={now}/>
           </div>
         </main>
