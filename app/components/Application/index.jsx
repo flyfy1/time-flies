@@ -71,7 +71,10 @@ export default class extends React.Component {
           <div className={styles.control_area}>
             <div className={styles.box}>
               <label>Birthday</label>
-              <DatePicker ref='birthday' timeFormat={false} onChange={this.update_dob.bind(this)} value={this.state.dob}/>
+              <DatePicker
+                timeFormat={false} onChange={this.update_dob.bind(this)} value={this.state.dob}
+                inputProps={{readOnly: true}}
+              />
             </div>
 
             <div className={styles.box}>
