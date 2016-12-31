@@ -52,8 +52,8 @@ export default class extends React.Component {
     /**
      * Compute the life
      */
-    const year_start = new Date(2016, 0, 1)
-    const year_end = new Date(2017, 0, 0, 23, 59, 59)
+    const year_start = new Date(2017, 0, 1)
+    const year_end = new Date(2018, 0, 0, 23, 59, 59)
 
     const dob = this.state.dob
 
